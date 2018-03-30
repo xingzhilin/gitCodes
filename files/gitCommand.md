@@ -25,9 +25,12 @@
 
 	-- 历史区
 
-	-- 查看历史状态
+#查看历史状态
+	$ git log
 
-  		$ git log
+	git log --pretty=oneline
+
+	-- 你看到的一大串类似3628164...882e1e0的是commit id（版本号）
 
 # 仓库当前的状态 
 	-- $ git status
@@ -37,7 +40,20 @@
 
 # 然后没什么问题了再提交   ===>  add -- status -- commit   -- status 
 
+# 丢弃工作区的修改
 
+	git checkout -- [fileName]
+
+# 删除文件
+	- 一是确实要从版本库中删除该文件，那就用命令git rm删掉，并且git commit：
+		--  $ git rm test.txt
+			rm 'test.txt'
+			$ git commit -m "remove test.txt
+
+	- 另一种情况是删错了，因为版本库里还有呢，所以可以很轻松地把误删的文件恢复到最新版本：
+		--  $ git checkout -- test.txt
+
+	***  命令git rm用于删除一个文件。如果一个文件已经被提交到版本库，那么你永远不用担心误删，但是要小心，你只能恢复文件到最新版本，你会丢失最近一次提交后你修改的内容。
 
 #同步远程仓库
 	- gitHub
