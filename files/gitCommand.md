@@ -102,3 +102,7 @@
 	合并某分支到当前分支：git merge <name>
 
 	删除分支：git branch -d <name>
+# 合并分支
+	- 现在，我们把dev分支的工作成果合并到master分支上：
+	$ git checkout master
+	$ git merge < 分支name | dev >
