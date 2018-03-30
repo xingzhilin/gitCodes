@@ -29,7 +29,15 @@
 
   		$ git log
 
-		修改时通过git status查看当前状态
+# 仓库当前的状态 
+	-- $ git status
+
+# 查看(difference) 具体修改了什么内容
+	-- git diff
+
+# 然后没什么问题了再提交   ===>  add -- status -- commit   -- status 
+
+
 
 #同步远程仓库
 	- gitHub
@@ -51,4 +59,17 @@
 		$ git remote 查看名字
 		$ git remote -v 查看地址
 
-	
+#分支
+	- 查看分支
+		$ git branch 
+	- 创建分支
+		$ git branch [name]
+
+	git checkout a
+	git checkout -b c切换分支
+	在master  git merge
+	git checkout b
+	git branch --merged 合并了哪些分支
+	git branch --no-merged 合并了哪些分支
+	git branch -d a 删除分支
+	git branch -D a 删除分支
